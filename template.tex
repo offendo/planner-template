@@ -1,0 +1,95 @@
+\documentclass[twocolumn]{book}
+\usepackage[margin=1cm,includehead,]{geometry}
+\usepackage{parskip}
+\usepackage{booktabs}
+\usepackage{amsmath}
+\usepackage{fancyhdr}
+%\usepackage{extramarks}
+\usepackage[most]{tcolorbox}
+\usepackage{xcolor}
+\definecolor{msepia}{HTML}{f4ecd8}
+\pagecolor{msepia}
+\usepackage{enumitem}
+
+\usepackage{fontspec}
+\setmainfont[Ligatures=TeX,]{Roboto Light}
+\newtcolorbox[auto counter]{todo}[1][]{%
+    enhanced,
+    breakable,
+    colback=white,
+    colbacktitle=white,
+    coltitle=black,
+    fonttitle=\Large\bfseries\underline,
+    boxrule=.6pt,
+    titlerule=.2pt,
+    toptitle=3pt,
+    bottomtitle=3pt,
+    title=todo:,
+    height=14cm,
+    #1}
+\newtcolorbox[auto counter]{notes}[1][]{%
+    enhanced,
+    breakable,
+    colback=white,
+    colbacktitle=white,
+    coltitle=black,
+    fonttitle=\Large\bfseries\underline,
+    boxrule=0.6pt,
+    titlerule=0.2pt,
+    toptitle=3pt,
+    bottomtitle=3pt,
+    title=notes:,
+    height=8cm,
+    #1}
+\newtcolorbox[auto counter]{days}[1][]{%
+    enhanced,
+    breakable,
+    colback=white,
+    colbacktitle=white,
+    coltitle=black,
+    fonttitle=,
+    boxrule=0.6pt,
+    titlerule=0.2pt,
+    toptitle=3pt,
+    bottomtitle=3pt,
+    title=,
+    height=22.2cm,
+    #1}
+\renewcommand{\headrulewidth}{0.0pt}%
+\begin{document}
+\pagestyle{fancy}
+\fancyhead{} % clear all header fields
+\fancyhead[LO,LE]{\Huge{week of \rule{0.34\textwidth}{0.15mm}}}
+
+%% Column 1
+\phantom{.}
+\vspace{0.5cm}
+
+\begin{todo}{}
+\end{todo}
+\begin{notes}{}
+\end{notes}
+
+\vfill\eject % end column
+
+%% Column 2
+\phantom{.}
+\vspace{0.5cm}
+
+\begin{days}
+	\setlist[itemize]{leftmargin=0mm}
+	\begin{itemize} \setlength\itemsep{2.55cm}
+		\item[] \Large{\bfseries{monday}}\hrule
+		\item[] \Large{\bfseries{tuesday}}\hrule
+		\item[] \Large{\bfseries{wednesday}}\hrule
+		\item[] \Large{\bfseries{thursday}}\hrule
+		\item[] \Large{\bfseries{friday}}\hrule
+		\item[] \Large{\bfseries{saturday}}\hrule
+		\item[] \Large{\bfseries{sunday}}\hrule
+	\end{itemize}
+\end{days}
+\end{document}
+
+% Local Variables:
+% TeX-engine: luatex
+% End:
