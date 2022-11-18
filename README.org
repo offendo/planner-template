@@ -1,0 +1,9 @@
+#+title: Simple Planner Template
+
+Nothing too fancy, just a simple template to keep track of todos, etc. over a week.
+
+
+#+CAPTION: Default template for planner
+#+NAME: fig:template
+#+ATTR_HTML: :width 500
+[[./template.png]]
